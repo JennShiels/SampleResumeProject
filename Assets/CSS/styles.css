@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto: 100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');/* Import from google fonts and
+                                                                                    include the weights of the fonts that will be used later*/
+
+header{
+    margin:0;
+}                                                                                    
+                                                                                    
+/* Define the logo class. Don't forget the dot to identify the class*/
+
+.logo {
+    background: url(/Assets/Images/Profilepic.jpg);
+    margin-top: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 360px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;    /* make sure to specify for the different browsers modzilla etc*/
+    -webkit-transition: all .5s ease-in-out;
+}
