@@ -258,5 +258,10 @@ So the idea is we're going to use a border to create a perfect circle around the
 }
 
 .social-links li a i:hover{
+	background-color:#e81460;
 	
+}
+
+#footer-details{
+	margin:20px;
 }
