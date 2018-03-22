@@ -66,16 +66,17 @@ set the general-sub to 'Exo' font imported earlier--*/
 }
 
 
-
 /*specify its child columns as table cells and by doing that we
 ensure that the columns will remain equal height regardless of their content*/
 
 .row-table {
-	display:table;
+	display:table-cell;
+	margin:0;
 }
 
 /*style the font for the About me section*/
 
+.history-heading,
 .section-heading{
 	font-family:"Exo", sans-serif;
 	font-weight: 300;
@@ -274,23 +275,24 @@ So the idea is we're going to use a border to create a perfect circle around the
 }
 
 /*-----------------------------------Personal-info*/
+
 .personal-info-item{
 	margin-bottom: 20px;
 	display: block;
 	clear:both;
 }
 
-.personal-info-item.key,
-.personal-info-item.value {
-	margin:8;
+.personal-info-item .key,
+.personal-info-item .value {
+	padding-right:8px;
 }
 
-.personal-info-item.key p,
-.personal-info-item.value p {
+.personal-info-item .key p,
+.personal-info-item .value p {
 	margin:0;
 }
 
-.personal-info-item.key {
+.personal-info-item .key {
 	display: inline-block;
 	width:30%;
 	margin-right:21px;
@@ -298,15 +300,85 @@ So the idea is we're going to use a border to create a perfect circle around the
 	vertical-align:top;
 }
 
-.personal-info-item.key p{
+.personal-info-item .key p{
 	font-weight:700;
 }
 
-.personal-info-item.value{
+.personal-info-item .value{
 	display:inline-block;
 	position:relative;
 	width:60%;
-	
+}
+
+/*-----------------------------------Skills*/
+
+.progress{
+	position:relative;
+	height:25px;
+}
+
+.progress-type{
+	position:absolute;
+	left:0px;
+	font-weight:400;
+	padding:0 30px 2px 10px;
+	color:#fafafa;
+	background-color:rgba(25,25,25,0.2);
+}
+
+.progress-section{
+	margin:40px 20px;
+}
+/*-----------------------------------Work History*/
+
+.timeline-item{
+	padding:4em 2em 0em 2em;
+	position:relative;
+	color:#fafafa;
+	border-left:1px solid;
+}
+
+.timeline-item p{
+	padding:0;
+	margin:0;
+}
+/*------------------ We're going to set a date range that will
+eventually be styled - grabbed by a style - using the ::before pseudo element and will
+represent the dates along the timeline. */
+
+.timeline-item:before{
+	content:attr(dates);
+	position:absolute;
+	left:2.5em;
+	top:3em;
+	display:block;
+	font-family: "Exo" sans-serif;
+	font-weight:500;
+	font-size:.8em;
+	padding:0;
+	margin:0;
+}
+
+.timeline-item:after{
+	width:12px;
+	height: 12px;
+	display:block;
+	top:2.4em;
+	position:absolute;
+	left:.6px;
+	border-radius:12px;
+	content:'';
+	background:#fafafa;
+}
+
+.history-heading{
+	color:#fafafa;
+	margin-bottom:50px;
+	margin-top:30px;
+}
+
+.history-items{
+	margin-bottom:30px;
 }
 
 /*-----------------------------------Media Queries*/
@@ -315,9 +387,9 @@ So the idea is we're going to use a border to create a perfect circle around the
 And we're using the break-point of 992px.
 So any screen size beyond 992px - greater than 992px - this section-column will now apply*/
 
-@media(min-width:992px){
+@media(min-width: 992px){
 .section-column{
 	padding:0 30px 30px;
 	float:none;
-	display:table-cell;
+	display: table-cell;
 }}
