@@ -65,7 +65,6 @@ set the general-sub to 'Exo' font imported earlier--*/
 	display: inline-block;
 }
 
-
 /*specify its child columns as table cells and by doing that we
 ensure that the columns will remain equal height regardless of their content*/
 
@@ -94,7 +93,7 @@ header {
 	margin-left: 50px;
 }
 
-.list-inline>li {
+.list-inline li {
 	display: inline-block;
 	padding-left:5px;
 	padding-right:5px;
@@ -106,7 +105,6 @@ header {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding-right: 5px;
 	min-height: 355px;
 	transition: all 0.5 ease-out;
 	-moz-transition: all 0.5 ease-out;
@@ -238,14 +236,14 @@ So the idea is we're going to use a border to create a perfect circle around the
 .social-links li a i {
 	width: 32px;
 	height: 32px;
-	padding: 12px 0;
+	padding: 12px;
 	border-radius: 50%;
 	font-size: 13px;
 	line-height: 7px;
 	text-align: center;
 	color: #fafafa;
 	background: #8f8f8f;
-	transition: all0.35s ease-in-out;
+	transition: all 0.35s ease-in-out;
 	-moz-transition: all 0.35s ease-in-out;
 	-webkit-transition: all 0.35s ease-in-out;
 	-o-transition: all 0.35s ease-in-out;
@@ -332,9 +330,9 @@ So the idea is we're going to use a border to create a perfect circle around the
 /*-----------------------------------Work History*/
 
 .timeline-item{
-	padding:4em 2em 0em 2em;
-	position:relative;
-	color:#fafafa;
+/*	padding:4em 2em 0em 2em;*/
+	position: relative;
+	color: #fafafa;
 	border-left:1px solid;
 }
 
@@ -365,7 +363,7 @@ represent the dates along the timeline. */
 	display:block;
 	top:2.4em;
 	position:absolute;
-	left:.6px;
+	left: 6px;
 	border-radius:12px;
 	content:'';
 	background:#fafafa;
@@ -379,8 +377,29 @@ represent the dates along the timeline. */
 
 .history-items{
 	margin-bottom:30px;
+	}
+	
+	
+/*-----------------------------------Contacts*/
+
+.contact-heading{
+	font-family: "Exo", sans-serif;
+	font-weight:300;
+	margin-top:25px;
+	margin-bottom:20px
 }
 
+.center-form{
+	padding-top:10px;
+	margin:0 auto;
+}
+
+button[type="submit"]{
+	margin-top:15px;
+	margin-bottom:20px;
+	background-color: #e84610;
+	color:#fafafa;
+}
 /*-----------------------------------Media Queries*/
 
 /* we're using the min-width rather than the max-width for mobile first.
@@ -389,7 +408,14 @@ So any screen size beyond 992px - greater than 992px - this section-column will 
 
 @media(min-width: 992px){
 .section-column{
-	padding:0 30px 30px;
+	padding:0px 30px 30px;
 	float:none;
 	display: table-cell;
 }}
+
+.center-form{
+	padding-top:30px;
+	min-height:240px;
+	margin:0 auto;
+	max-height:50%;
+}
