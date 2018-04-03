@@ -15,7 +15,7 @@
 }
 
 .bg-color-work-history {
-	background-color: #9b59b6;
+	background-color: #fafafa;
 }
 
 .bg-color-contact {
@@ -220,7 +220,7 @@ footer .cv-pdf i {
 
 
 footer .cv-pdf i:hover {
-	color: #e84610;
+	color: #ffff01;
 	transition: all 0.35s ease-in-out;
 	-moz-transition: all 0.35s ease-in-out;
 	-webkit-transition: all 0.35s ease-in-out;
@@ -239,7 +239,7 @@ So the idea is we're going to use a border to create a perfect circle around the
 .social-links li a i {
 	width: 32px;
 	height: 32px;
-/*	padding: 12px;*/
+	padding: 12px;
 	border-radius: 50%;
 	font-size: 13px;
 	line-height: 7px;
@@ -278,6 +278,7 @@ So the idea is we're going to use a border to create a perfect circle around the
 /*-----------------------------------Personal-info*/
 
 .personal-info-item{
+	margin-top: 15px;
 	margin-bottom: 20px;
 	display: block;
 	clear:both;
@@ -328,14 +329,14 @@ So the idea is we're going to use a border to create a perfect circle around the
 }
 
 .progress-section{
-	margin:40px 20px;
+	margin:40px 20px 10px;
 }
 /*-----------------------------------Work History*/
 
 .timeline-item{
 	padding:4em 2em 0em 2em;
 	position: relative;
-	color: #fafafa;
+	color: #333333;
 	border-left:1px solid;
 }
 
@@ -363,23 +364,23 @@ represent the dates along the timeline. */
 .timeline-item:after{
 	width:12px;
 	height: 12px;
-	display:block;
+	display:inline-block;
 	top:2.4em;
 	position:absolute;
 	left: -6px;
 	border-radius:12px;
 	content:'';
-	background:#fafafa;
+	background:#333333;
 }
 
 .history-heading{
-	color:#fafafa;
+	color:#333;
 	margin-bottom:50px;
 	margin-top:30px;
 }
 
 .history-items{
-	margin-bottom:30px;
+	margin-bottom:15px;
 	}
 	
 	
@@ -412,7 +413,7 @@ So any screen size beyond 992px - greater than 992px - this section-column will 
 
 @media(min-width: 992px){
 .section-column{
-	padding:0px 30px 30px;
+	padding:0px 0px 0px;
 	float:none;
 	display: table-cell;
 }
